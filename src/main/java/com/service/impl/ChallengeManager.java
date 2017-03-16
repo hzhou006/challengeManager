@@ -25,13 +25,13 @@ public class ChallengeManager implements IChallengeManager {
 	public void addUserRound(int userId, int roundId, double primaryStat, double secondaryStat) {
 		
 		userRoundDao.addUserRounds(userId, roundId, primaryStat, secondaryStat);
-		
+		userRoundDao.updateAllByUserId(userId);
 	}
 
 	@Override
 	public void removeUserRound(int userId, int roundId) {
 		userRoundDao.deleteById(userId, roundId);
-		
+		userRoundDao.updateAllByUserId(userId);
 	}
 
 	@Override
