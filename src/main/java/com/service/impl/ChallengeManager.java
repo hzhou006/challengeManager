@@ -25,6 +25,7 @@ public class ChallengeManager implements IChallengeManager {
 	public void addUserRound(int userId, int roundId, double primaryStat, double secondaryStat) {
 		
 		userRoundDao.addUserRounds(userId, roundId, primaryStat, secondaryStat);
+		
 	}
 
 	@Override

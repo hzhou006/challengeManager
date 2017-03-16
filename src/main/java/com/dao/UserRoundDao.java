@@ -27,6 +27,8 @@ public interface UserRoundDao extends CrudRepository<UserRounds, Integer>{
 	@Query("delete from UserRounds c WHERE c.userId = :userId AND c.roundId = :roundId" )
 	public void deleteById(@Param("userId") int userId, @Param("roundId") int roundId);
 	
-	@Query("select c.userId from UserRounds c group by c.UserId order by avg(c.primaryStat), avg(c.secondaryStat)")
+	@Query("select c from UserRounds c group by c.UserId order by avg(c.primaryStat), avg(c.secondaryStat) DESC") 
 	public int findUserRankByUserId(@Param("userId") int userId);
+	
+
 }

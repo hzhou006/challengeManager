@@ -6,6 +6,13 @@ public class UserRounds {
     int roundId;
     double primaryStat;
     double secondaryStat;
+    int id;
+	public int getId() {
+		return id;
+	}
+	public void setRank(int id) {
+		this.id = id;
+	}
 	public int getUserId() {
 		return userId;
 	}
