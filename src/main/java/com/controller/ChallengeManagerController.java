@@ -22,7 +22,7 @@ public class ChallengeManagerController {
 	@Autowired
 	private IChallengeManager challengeManagerService = null;
 
-	@RequestMapping(value = "/fetchRankByUserId", method = RequestMethod.POST)
+	@RequestMapping(value = "/fetchRankByUserId", method = RequestMethod.GET)
 	public  ChallengeManagerResponse fetchRankByUserId(@RequestParam("userId") Integer userId) {
 		ChallengeManagerResponse response;
 		if (userId == null) {
